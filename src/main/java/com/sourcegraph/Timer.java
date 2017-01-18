@@ -14,6 +14,11 @@ public class Timer {
                 .forEach(System.out::println);
     }
 
+    /**
+     * helper for formatting DateTime objects
+     * @param dateTime: the date that you want formatted
+     * @return the formatted date
+     */
     private static String formatTimeMessage(DateTime dateTime) {
         return String.format(
                 "The time is %d:%02d:%02d",
