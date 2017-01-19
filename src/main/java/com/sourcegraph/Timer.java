@@ -7,6 +7,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Timer {
 
+    /**
+     * Start the timer!
+     */
     public void start() {
         Observable.interval(3, TimeUnit.SECONDS)
                 .map(__ -> DateTime.now())
