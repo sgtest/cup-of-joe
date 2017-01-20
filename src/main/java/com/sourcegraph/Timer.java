@@ -22,7 +22,7 @@ public class Timer {
      * @param dateTime: the date that you want formatted
      * @return the formatted date
      */
-    private static String formatTimeMessage(DateTime dateTime) {
+    public static String formatTimeMessage(DateTime dateTime) {
         return String.format(
                 "The time is %d:%02d:%02d",
                 dateTime.hourOfDay().get(),

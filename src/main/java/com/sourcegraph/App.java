@@ -1,5 +1,6 @@
 package com.sourcegraph;
 
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +17,7 @@ public class App {
 
     public void run(String... args) throws Exception {
 
-        log.info("Starting the timer!");
+        log.info("Starting the timer at {}!", Timer.formatTimeMessage(DateTime.now()));
 
         {
             String log = "I'm a log.";
