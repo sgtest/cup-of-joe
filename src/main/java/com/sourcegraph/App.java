@@ -18,6 +18,11 @@ public class App {
 
         log.info("Starting the timer!");
 
+        {
+            String log = "I'm a log.";
+            System.out.println(log);
+        }
+
         timer.start();
 
         synchronized (this) {
