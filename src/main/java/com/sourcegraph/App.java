@@ -8,7 +8,7 @@ public class App {
 
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
-    private Timer timer = new Timer();
+    private Timer<String> timer = new Timer<>("apple");
 
     public static void main(String... args) throws Exception {
         App app = new App();

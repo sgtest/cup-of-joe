@@ -5,7 +5,13 @@ import org.joda.time.DateTime;
 
 import java.util.concurrent.TimeUnit;
 
-public class Timer {
+public class Timer<T> {
+
+    T thing;
+
+    public Timer(T thing) {
+        this.thing = thing;
+    }
 
     /**
      * Start the timer!
@@ -33,6 +39,6 @@ public class Timer {
 
     @Override
     public String toString() {
-        return "Hey, I'm a timer!";
+        return "Timer with " + thing.toString();
     }
 }
