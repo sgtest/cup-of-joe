@@ -30,4 +30,9 @@ public class Timer {
                 dateTime.secondOfMinute().get()
         );
     }
+
+    @Override
+    public String toString() {
+        return "Hey, I'm a timer!";
+    }
 }
