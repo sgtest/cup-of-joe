@@ -1,14 +1,12 @@
 package com.sourcegraph;
 
-import org.joda.time.DateTime;
+import com.sourcegraph.cup.Cup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class App {
 
     private static final Logger log = LoggerFactory.getLogger(App.class);
-
-    private Timer<String> timer = new Timer<>("apple");
 
     public static void main(String... args) throws Exception {
         App app = new App();
@@ -17,14 +15,20 @@ public class App {
 
     public void run(String... args) throws Exception {
 
-        log.info("Starting the timer at {}!", Timer.formatTimeMessage(DateTime.now()));
+        Cup<Double> floatingCup = new Cup<>(42.0);
+
+        log.info("Diagnostic message: {}", floatingCup);
 
         {
-            String log = "I'm a log.";
+            String log = "I'm another log. I shadow that log up there.";
             System.out.println(log);
         }
 
-        timer.start();
+        floatingCup.refill(10);
+
+        Double cupContents = floatingCup.pour();
+
+        log.info("Got {} out of the cup!", cupContents);
 
         synchronized (this) {
             while (true) {
