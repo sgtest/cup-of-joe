@@ -44,5 +44,6 @@ public class App {
     @JsonInclude
     public void whatever() {
         new Cup<String>("some string") {}.refill("some more string");
+        Broken.foo();
     }
 }
