@@ -46,4 +46,9 @@ public class App {
         new Cup<String>("some string") {}.refill("some more string");
         Broken.foo();
     }
+
+    @Shiny(isSparkly = true)
+    public void foo() {
+        log.info("Foo");
+    }
 }
