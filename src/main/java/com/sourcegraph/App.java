@@ -1,5 +1,5 @@
 package com.sourcegraph;
-
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.sourcegraph.cup.Cup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,5 +39,15 @@ public class App {
                 }
             }
         }
+    }
+
+    @JsonInclude
+    public void whatever() {
+        new Cup<String>("some string") {}.refill("some more string");
+    }
+
+    @Shiny(isSparkly = true)
+    public void foo() {
+        log.info("Foo");
     }
 }
