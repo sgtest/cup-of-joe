@@ -10,8 +10,8 @@
 
     <repositories>
         <repository>
-            <id>jcenter</id>
-            <name>JCenter</name>
+            <id>myJCenter</id>
+            <name>My JCenter</name>
             <url>http://localhost:8081/artifactory/jcenter</url>
         </repository>
     </repositories>
