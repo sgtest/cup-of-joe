@@ -8,6 +8,14 @@
     <name>time-of-day</name>
     <url>http://maven.apache.org</url>
 
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>http://localhost:8081/artifactory/jcenter</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
